@@ -11,7 +11,7 @@ st.write(
 )
 
 # Get the current credentials
-cnx = st.connect("snowflake")
+cnx = st.connection("snowflake")
 session = cnx.session()
 
 orders_df = (
