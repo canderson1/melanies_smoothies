@@ -24,7 +24,7 @@ session = cnx.session()
 name_order = st.text_input('Name on the smoothie:')
 st.write('Order for: ', name_order)
 
-fruit_df = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON))
+fruit_df = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON'))
 pd_df = fruit_df.to_pandas()
 st.dataframe(pd_df)
 
